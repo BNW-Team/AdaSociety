@@ -1,0 +1,34 @@
+Rainbow contract complex:
+python rllib_train.py \
+    --task contract_complex \
+    --size 15 \
+    --obs_range 2 \
+    --terminated_point 200 \
+    --group_num 8 \
+    --gnn \
+    --algo Rainbow \
+    --gamma 0.99 \
+    --lr 2e-5 \
+    --v_max 100.0 \
+    --grad_clip 20.0 \
+    --num_rollout_workers 8 \
+    --num_envs_per_worker 8 \
+    --rollout_fragment_length 240 \
+    --save_interval 200 \
+    --sgd_minibatch_size 8192 \
+    --share \
+
+Rainbow contract:
+python rllib_train.py \
+    --task contract \
+    --size 7  \
+    --obs_range 3 \
+    --gnn \
+    --algo Rainbow \
+    --gamma 0.99 \
+    --lr 2e-5 \
+    --v_max 50.0 \
+    --num_rollout_workers 8 \
+    --num_envs_per_worker 15 \
+    --rollout_fragment_length 120 \
+    --sgd_minibatch_size 8192 \

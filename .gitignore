@@ -1,0 +1,4 @@
+project/Environment/test.py
+__pycache__/
+results/
+*.sh
