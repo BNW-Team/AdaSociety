@@ -1,3 +1,5 @@
+**WARNING: This is the old version. New version yet to come!!!**
+
 # AdaSociety
 
 ![Overview](./docs/architecture.svg)
